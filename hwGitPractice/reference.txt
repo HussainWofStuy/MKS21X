@@ -1,0 +1,13 @@
+Git Commands:
+ git pull (clone URL - HTTPS or SSH)
+ git clone (clone URL - HTTPS or SSH)
+ git init
+ git status
+ git add
+ git diff
+ git commit
+ git log
+ git checkout HEAD filename
+ git reset HEAD filename
+ git reset SHA
+ git push
