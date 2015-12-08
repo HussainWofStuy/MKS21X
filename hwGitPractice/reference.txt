@@ -1,13 +1,14 @@
 Git Commands:
- git pull (clone URL - HTTPS or SSH)
- git clone (clone URL - HTTPS or SSH)
- git init
- git status
- git add
- git diff
- git commit
- git log
- git checkout HEAD filename
- git reset HEAD filename
- git reset SHA
- git push
+ git pull (clone URL - HTTPS or SSH) - pull repository onto local system
+ git clone (clone URL - HTTPS or SSH) - get repository onto loacal system
+ git init - creates new Git repository  
+ git status - inspect the contents of the working directory
+ git add - ads files from the working directory to the staging area
+ git diff - shows the difference between the working directory and the staging area
+ git commit -m "(Some message)" - permanently stores file changes from the staging area in the repository 
+ git log - shows a list of all previous commits
+ git checkout HEAD filename - discards changes in the working directory
+ git reset HEAD filename - unstages file changes in the staging area
+ git reset SHA - can be used to reset to a previous commmit in your commit history
+ git push - push file and changes from the staging area onto repository on git account
+ 
