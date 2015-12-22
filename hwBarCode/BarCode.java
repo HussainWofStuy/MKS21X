@@ -10,21 +10,26 @@ public class BarCode implements Comparable{
 		    throw new IllegalArgumentException("Make sure the length of the zip is exactly 5");
 		}
 	        Integer.parseInt(_zip);
-	    }(catch NumberFormatException e){
+	    }catch(NumberFormatException e){
 		throw new NumberFormatException("Please make sure all the characters in the zip are integers");
 	    }
 	    _zip = zip;
-	    _checkdigit = checkSum();
+	    _checkDigit = checkSum();
 	}
 
 	// postcondition: Creates a copy of a bar code.
-	public BarCode(BarCode x){}
-
-
+	public BarCode(BarCode x){
+	    _zip = x._zip;
+	    _checkDigit = x._checkDigit;
+	}
+	
 	//post: computes and returns the check sum for _zip
 	private int checkSum(){
-	    //int sum = 0;
-	    //for(int x = 0; x <  
+	    int sum = 0;
+	    for(int x = 0; x < 5; x++){
+	        sum += Integer.parseInt(_zip.substring(x,x+1));
+	    }
+	    return sum;
 	}
 
 	//postcondition: format zip + check digit + barcode
