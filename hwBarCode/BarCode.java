@@ -9,7 +9,7 @@ public class BarCode{
 	    if(zip.length()<5){
 		throw new IllegalArgumentException("Make sure the length of the zip is exactly 5");
 	    }
-	    Integer.parseInt(_zip);
+	    Integer.parseInt(zip);
 	}catch(NumberFormatException e){
 	    throw new NumberFormatException("Please make sure all the characters in the zip are integers");
 	}
@@ -29,7 +29,7 @@ public class BarCode{
 	for(int x = 0; x < 5; x++){
 	    sum += Integer.parseInt(_zip.substring(x,x+1));
 	}
-	return sum;
+	return sum%10;
     }
     
     //postcondition: format zip + check digit + barcode
@@ -39,7 +39,7 @@ public class BarCode{
 	for(int x = 0; x < _zip.length(); x++){
 	    ans += c[Integer.parseInt(_zip.substring(x,x+1))];
 	}
-	ans += checkSum() + "|";
+	ans += c[checkSum()] + "|";
 	return ans;
     }
     
