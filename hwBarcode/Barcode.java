@@ -1,3 +1,3 @@
-public class Barcode implement Comparable{
+public class BarCode implements comparable{
 
 }
