@@ -17,21 +17,24 @@ public class Driver{
 	*/
 
 	Random rand = new Random();
-	int[] ary  = new int[10];
-	for(int k = 0; k < 10; k++){
+	int[] ary  = new int[5];
+	for(int k = 0; k < ary.length; k++){
 	    ary[k] = rand.nextInt(101);
 	}
 
 	Sorts.printArray(ary);
-	int[] aryI = ary;
+	int[] aryI = ary.clone();
 	Sorts.insertionSort(aryI);
-	int[] aryS = ary;
+	int[] aryS = ary.clone();
 	Sorts.selectionSort(aryS);
-	int[] aryR = ary;
+	//int[] aryB = ary.clone();
+	//Sorts.bubbleSort(aryB);
+	int[] aryR = ary.clone();
 	Arrays.sort(aryR);
 
-	Sorts.printArray(aryI);
-	Sorts.printArray(aryS);
+	//Sorts.printArray(aryI);
+	//Sorts.printArray(aryS);
+	//Sorts.printArray(aryB);
 	Sorts.printArray(aryR);
     }
 }
