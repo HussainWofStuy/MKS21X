@@ -22,18 +22,16 @@ public class Sorts{
     }
 
     public static void selectionSort(int[] data){
-	int p = 0;
-	int i = 0;
-	while(p < data.length){
-	    for(int x = 0; x < data.length; x++){
-	        if(data[p+1] < data[p]){
-		    i = p+1; 
+	for(int i = 0; i < data.length - 1; i++){
+	    int x = i;
+	    for(int k = i + 1; k < data.length; k++){
+		if(data[k] < data[x]){
+		    x = k;
 		}
 	    }
-	    int u = data[p];
-	    data[p] = data[p+1];
-	    data[i] = u;
-	    p++;
+	    int f = data[x];
+	    data[x] = data[i];
+	    data[i] = f;
 	}
     }
 }

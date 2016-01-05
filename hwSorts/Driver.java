@@ -1,5 +1,8 @@
+import java.util.*;
 public class Driver{
     public static void main(String[]args){
+
+	/*
 	System.out.println("Too" + 2 + "Too");
         int[] ary = {4, 4, 3, 2, 1, 1, 0, 5};
 	Sorts.printArray(ary);
@@ -11,5 +14,24 @@ public class Driver{
 	Sorts.printArray(ary1);
 	Sorts.selectionSort(ary1);
 	Sorts.printArray(ary1);
+	*/
+
+	Random rand = new Random();
+	int[] ary  = new int[10];
+	for(int k = 0; k < 10; k++){
+	    ary[k] = rand.nextInt(101);
+	}
+
+	Sorts.printArray(ary);
+	int[] aryI = ary;
+	Sorts.insertionSort(aryI);
+	int[] aryS = ary;
+	Sorts.selectionSort(aryS);
+	int[] aryR = ary;
+	Arrays.sort(aryR);
+
+	Sorts.printArray(aryI);
+	Sorts.printArray(aryS);
+	Sorts.printArray(aryR);
     }
 }
