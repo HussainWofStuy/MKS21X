@@ -45,4 +45,25 @@ public class Sorts{
 	System.out.println("Done!");
 	System.out.println("-----------------");
     }
+
+    public static void bubbleSort(int[] data){
+	boolean s = true;
+	int a;
+	System.out.println("-----------------");
+	System.out.println("Start bubble");
+	while(s){
+	    s = false;
+	    for(int k = 0; k < data.length-1; k++){
+		if(data[k] > data[k+1]){
+		    a = data[k];
+		    data[k] = data[k+1];
+		    data[k+1] = a;
+		    s = true;
+		}
+	    }
+	    printArray(data);
+	}
+	System.out.println("Done!");
+	System.out.println("-----------------");
+    }
 }

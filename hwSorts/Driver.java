@@ -27,8 +27,8 @@ public class Driver{
 	Sorts.insertionSort(aryI);
 	int[] aryS = ary.clone();
 	Sorts.selectionSort(aryS);
-	//int[] aryB = ary.clone();
-	//Sorts.bubbleSort(aryB);
+	int[] aryB = ary.clone();
+	Sorts.bubbleSort(aryB);
 	int[] aryR = ary.clone();
 	Arrays.sort(aryR);
 
