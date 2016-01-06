@@ -1,3 +1,4 @@
+import java.util.*;
 public class Sorts{
     public static void printArray(int[] data){
 	String s = "[";
@@ -6,12 +7,26 @@ public class Sorts{
 	}
 	System.out.println(s + data[data.length-1] + "]");
     }
+
+    public static void fillRandom(int[] data){
+	for(int k = 0; k < data.length; k++){
+	    int sign = (int)(Math.pow(-1,(int)(Math.random()*2)));
+	    int num = sign*(int)(Math.random()*1000);
+	    data[k] = num;
+	}
+    }
+
+    public static void swap(int[] data, int a, int b){
+	int num = data[a];
+	data[a] = data[b];
+	data[b] = num;
+    }
     
     public static void insertionSort(int[] data){
 	int p;
 	int k;
-	System.out.println("------------------");
-	System.out.println("Start insertion");
+	//System.out.println("------------------");
+	//System.out.println("Start insertion");
 	for(int x = 0; x < data.length; x ++){
 	    p = data[x];
 	    k = x - 1;
@@ -20,15 +35,15 @@ public class Sorts{
 		k--;
 	    }
 	    data[k+1] = p;
-	    printArray(data);
+	    //printArray(data);
 	}
-	System.out.println("Done!");
-	System.out.println("-----------------");
+	//System.out.println("Done!");
+	//System.out.println("-----------------");
     }
 
     public static void selectionSort(int[] data){
-	System.out.println("-----------------");
-	System.out.println("Start selection");
+	//System.out.println("-----------------");
+	//System.out.println("Start selection");
         printArray(data);
 	for(int i = 0; i < data.length - 1; i++){
 	    int x = i;
@@ -40,17 +55,17 @@ public class Sorts{
 	    int f = data[x];
 	    data[x] = data[i];
 	    data[i] = f;
-	    printArray(data);
+	    //printArray(data);
 	}
-	System.out.println("Done!");
-	System.out.println("-----------------");
+	//System.out.println("Done!");
+	//System.out.println("-----------------");
     }
 
     public static void bubbleSort(int[] data){
 	boolean s = true;
 	int a;
-	System.out.println("-----------------");
-	System.out.println("Start bubble");
+	//System.out.println("-----------------");
+	//System.out.println("Start bubble");
 	while(s){
 	    s = false;
 	    for(int k = 0; k < data.length-1; k++){
@@ -61,9 +76,9 @@ public class Sorts{
 		    s = true;
 		}
 	    }
-	    printArray(data);
+	    //printArray(data);
 	}
-	System.out.println("Done!");
-	System.out.println("-----------------");
+	//System.out.println("Done!");
+	//System.out.println("-----------------");
     }
 }
